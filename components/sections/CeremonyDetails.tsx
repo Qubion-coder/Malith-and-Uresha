@@ -129,7 +129,7 @@ export default function CeremonyDetails() {
             </div>
 
             <h2 className="mb-8 font-serif text-5xl font-light leading-snug text-[#f5e6c8] md:text-7xl">
-              Wedding <br />
+              Homecoming <br />
               <span className="italic text-[#C9A227]">Ceremony</span>
             </h2>
 
