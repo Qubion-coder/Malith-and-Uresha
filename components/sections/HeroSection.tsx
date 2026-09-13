@@ -22,7 +22,7 @@ export default function HeroSection() {
       className="relative min-h-[100svh] w-full overflow-hidden"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-[3px] scale-105"
+        className="absolute inset-0 bg-cover bg-[50%_25%] bg-no-repeat blur-[3px] scale-105"
         style={{ backgroundImage: 'url(/images/2.jpg)' }}
       />
 
