@@ -68,17 +68,17 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.25 }}
-          className="mt-8 flex flex-col items-center max-w-3xl text-[10px] sm:text-xs md:text-sm uppercase tracking-widest leading-loose text-[#f8ead0] drop-shadow-md font-medium"
+          className="mt-6 flex flex-col items-center max-w-3xl text-[10px] sm:text-xs md:text-sm uppercase tracking-widest leading-loose text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-semibold bg-black/20 px-6 py-8 rounded-3xl backdrop-blur-[2px]"
         >
-          <p>Loving Son of Mr. Janaka Cooray &amp; Mrs. Sunila</p>
-          <p className="my-2 italic lowercase text-[#f0daaa]">together with</p>
-          <p>Loving Daughter of Mr. Kaminda Vijayantha &amp; Mrs. Priyanga</p>
-          <p className="mt-6">Request the pleasure of the company of</p>
+          <p className="text-white drop-shadow-md">Loving Son of Mr. Janaka Cooray &amp; Mrs. Sunila</p>
+          <p className="my-3 italic lowercase text-[#f0daaa] font-medium tracking-widest">together with</p>
+          <p className="text-white drop-shadow-md">Loving Daughter of Mr. Kaminda Vijayantha &amp; Mrs. Priyanga</p>
+          <p className="mt-8 text-white/90 drop-shadow-md">Request the pleasure of the company of</p>
           {guestName && (
-            <p className="mt-4 font-semibold text-[#fff7e8] text-sm sm:text-base">{guestPrefix} {guestName}</p>
+            <p className="mt-4 font-semibold text-[#f0daaa] text-sm sm:text-base drop-shadow-md">{guestPrefix} {guestName}</p>
           )}
-          <div className="w-full max-w-md h-px bg-[#f0daaa]/30 my-4"></div>
-          <p>On the occasion of their marriage</p>
+          <div className="w-full max-w-md h-px bg-white/20 my-5"></div>
+          <p className="text-white/90 drop-shadow-md">On the occasion of their marriage</p>
         </motion.div>
 
         <motion.div
