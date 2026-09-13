@@ -22,11 +22,13 @@ export default function HeroSection() {
       className="relative min-h-[100svh] w-full overflow-hidden"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-[3px] scale-105"
         style={{ backgroundImage: 'url(/images/2.jpg)' }}
       />
 
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,17,28,0.42)_0%,rgba(20,17,28,0.58)_55%,rgba(20,17,28,0.82)_100%)]" />
+      {/* Improved vignette overlay to show the image while keeping text readable */}
+      <div className="absolute inset-0 bg-black/30 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.1)_0%,rgba(0,0,0,0.7)_100%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
 
       <div className="pointer-events-none absolute inset-0 opacity-[0.16] mix-blend-screen">
         <div
@@ -57,16 +59,16 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.1, delay: 0.1 }}
-          className="font-serif text-4xl font-light leading-tight tracking-[0.08em] text-[#fff7e8] sm:text-6xl md:text-7xl lg:text-8xl"
+          className="font-serif text-4xl font-light leading-tight tracking-[0.08em] text-[#fff7e8] sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-xl"
         >
-          MALITH <span className="text-[#f0daaa]">&amp;</span> URESHA
+          MALITH <span className="text-[#f0daaa] drop-shadow-md">&amp;</span> URESHA
         </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.25 }}
-          className="mt-8 flex flex-col items-center max-w-3xl text-[10px] sm:text-xs md:text-sm uppercase tracking-widest leading-loose text-[#f8ead0]"
+          className="mt-8 flex flex-col items-center max-w-3xl text-[10px] sm:text-xs md:text-sm uppercase tracking-widest leading-loose text-[#f8ead0] drop-shadow-md font-medium"
         >
           <p>Loving Son of Mr. Janaka Cooray &amp; Mrs. Sunila</p>
           <p className="my-2 italic lowercase text-[#f0daaa]">together with</p>
