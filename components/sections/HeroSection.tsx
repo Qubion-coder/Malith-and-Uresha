@@ -23,7 +23,7 @@ export default function HeroSection() {
     >
       <div
         className="absolute inset-0 bg-cover bg-[50%_25%] bg-no-repeat blur-[3px] scale-105"
-        style={{ backgroundImage: 'url(/images/2.jpg)' }}
+        style={{ backgroundImage: 'url(/images/55.jpg)' }}
       />
 
       {/* Improved vignette overlay to show the image while keeping text readable */}
