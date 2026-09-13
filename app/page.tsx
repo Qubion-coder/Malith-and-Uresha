@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import VideoIntro from '@/components/VideoIntro';
 import HeroSection from '@/components/sections/HeroSection';
 import StorySection from '@/components/sections/StorySection';
@@ -15,6 +15,15 @@ import FooterSection from '@/components/sections/FooterSection';
 
 export default function Home() {
   const [isOpened, setIsOpened] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const handleOpen = () => {
+    setIsOpened(true);
+    if (audioRef.current) {
+      audioRef.current.volume = 0.4; // 40% volume for background
+      audioRef.current.play().catch(e => console.log("Audio play failed:", e));
+    }
+  };
 
   useEffect(() => {
     const html = document.documentElement;
@@ -23,8 +32,10 @@ export default function Home() {
 
   return (
     <div className="relative w-full overflow-x-hidden bg-background">
+      <audio ref={audioRef} src="/Edd_Sheeran_-_Perfect_(mp3.pm).mp3" loop />
+      
       {!isOpened ? (
-        <VideoIntro onComplete={() => setIsOpened(true)} />
+        <VideoIntro onComplete={handleOpen} />
       ) : (
         <>
           <HeroSection />
