@@ -3,9 +3,18 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Cross, Heart, Sparkles } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function HeroSection() {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
+  const [guestPrefix, setGuestPrefix] = useState('');
+  const [guestName, setGuestName] = useState('');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setGuestPrefix(params.get('prefix') || '');
+    setGuestName(params.get('name') || '');
+  }, []);
 
   return (
     <section
@@ -14,7 +23,7 @@ export default function HeroSection() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/16.jpg)' }}
+        style={{ backgroundImage: 'url(/images/2.jpg)' }}
       />
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,17,28,0.42)_0%,rgba(20,17,28,0.58)_55%,rgba(20,17,28,0.82)_100%)]" />
@@ -63,7 +72,9 @@ export default function HeroSection() {
           <p className="my-2 italic lowercase text-[#f0daaa]">together with</p>
           <p>Loving Daughter of Mr. Kaminda Vijayantha &amp; Mrs. Priyanga</p>
           <p className="mt-6">Request the pleasure of the company of</p>
-          <p className="mt-4 font-semibold text-[#fff7e8]">Mr. / Miss. / Mrs. / Mr. &amp; Mrs. / Family of</p>
+          {guestName && (
+            <p className="mt-4 font-semibold text-[#fff7e8] text-sm sm:text-base">{guestPrefix} {guestName}</p>
+          )}
           <div className="w-full max-w-md h-px bg-[#f0daaa]/30 my-4"></div>
           <p>On the occasion of their marriage</p>
         </motion.div>

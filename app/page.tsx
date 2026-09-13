@@ -28,7 +28,6 @@ export default function Home() {
       ) : (
         <>
           <HeroSection />
-          <StorySection />
           <CeremonyDetails />
           <CountdownSection />
           <GallerySection />
