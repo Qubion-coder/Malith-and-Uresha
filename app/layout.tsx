@@ -19,10 +19,6 @@ export const metadata: Metadata = {
   title: 'Malith & Uresha Wedding',
   description: 'Join us as we celebrate the wedding of Malith & Uresha.',
   generator: 'v0.app',
-  icons: {
-    icon: '/wedding-icon.png',
-    apple: '/wedding-icon.png',
-  },
 }
 
 export const viewport: Viewport = {
