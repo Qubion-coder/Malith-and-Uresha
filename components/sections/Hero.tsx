@@ -72,7 +72,7 @@ export default function Hero() {
           style={{ color: 'var(--primary)' }}
           variants={itemVariants}
         >
-          VIMUKTHI & PIUMI
+          MALITH & URESHA
         </motion.h1>
 
         {/* Decorative line */}

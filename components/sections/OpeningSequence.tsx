@@ -131,9 +131,9 @@ export default function OpeningSequence({ onComplete }: OpeningSequenceProps) {
             transition={{ duration: 1 }}
           >
             <h1 className="text-5xl md:text-7xl font-light mb-6 text-white">
-              <span className="block mb-2">VIMUKTHI</span>
+              <span className="block mb-2">MALITH</span>
               <span className="text-secondary text-3xl md:text-4xl font-light mb-2">&</span>
-              <span className="block">PIUMI</span>
+              <span className="block">URESHA</span>
             </h1>
             <p className="text-sm md:text-base text-ivory/80 font-light tracking-wide mt-6 mb-2">
               Bride's Parents: Mother - T H Anusha Shiranthi | Father - G Dayawansa

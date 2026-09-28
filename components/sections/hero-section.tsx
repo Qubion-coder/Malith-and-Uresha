@@ -53,7 +53,7 @@ export function HeroSection() {
           className="space-y-4"
         >
           <h1 className="text-7xl md:text-8xl font-serif font-light text-gold leading-tight">
-            VIMUKTHI & PIUMI
+            MALITH & URESHA
           </h1>
 
           {/* Animated Underline */}
